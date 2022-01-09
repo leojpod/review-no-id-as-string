@@ -138,12 +138,10 @@ functionDeclarationVisitor { signature, declaration } =
                             _ ->
                                 Nothing
                     )
-                |> Debug.log "idLikeArguments"
 
         stringArgsIdx : List Int
         stringArgsIdx =
             stringArgumentsFromSignature signature
-                |> Debug.log "stringArgsIdx"
     in
     List.filterMap
         (\( idx, node, varName ) ->
